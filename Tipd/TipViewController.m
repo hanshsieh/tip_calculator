@@ -7,6 +7,7 @@
 //
 
 #import "TipViewController.h"
+#import "SettingsViewController.h"
 
 @interface TipViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *billTextField;
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 - (IBAction)onAmountDataUpdated:(id)sender;
 - (void)updateValues;
+- (void)onSettingsButton;
 
 @end
 
@@ -30,17 +32,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self updateValues];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onAmountDataUpdated:(id)sender {
     [self.view endEditing:YES];
     [self updateValues];
+}
+
+- (void)onSettingsButton {
+    SettingsViewController* settings = [[SettingsViewController alloc] init];
+    [self.navigationController pushViewController:settings animated:YES];
 }
 
 - (void)updateValues {
@@ -51,6 +57,16 @@
     float totalAmount = tipAmount + billAmount;
     self.tipLabel.text = [NSString stringWithFormat:@"%.2f", tipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"%.2f", totalAmount];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    id percentageIdx = [defaults objectForKey:@"default_percentage_idx"];
+    if (percentageIdx == nil) {
+        percentageIdx = @0;
+    }
+    self.tipControl.selectedSegmentIndex = [percentageIdx integerValue];
+    [self updateValues];
 }
 @end
 
