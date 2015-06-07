@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		5E60F15E1B1F22BA0078704A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E60F15D1B1F22BA0078704A /* main.m */; };
 		5E60F1611B1F22BA0078704A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E60F1601B1F22BA0078704A /* AppDelegate.m */; };
-		5E60F1641B1F22BA0078704A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E60F1631B1F22BA0078704A /* ViewController.m */; };
-		5E60F1671B1F22BA0078704A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E60F1651B1F22BA0078704A /* Main.storyboard */; };
 		5E60F1691B1F22BA0078704A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E60F1681B1F22BA0078704A /* Images.xcassets */; };
-		5E60F16C1B1F22BA0078704A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E60F16A1B1F22BA0078704A /* LaunchScreen.xib */; };
 		5E60F1781B1F22BA0078704A /* TipdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E60F1771B1F22BA0078704A /* TipdTests.m */; };
+		5E642B9F1B24691000903D95 /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E642B9D1B24691000903D95 /* TipViewController.m */; };
+		5E642BA01B24691000903D95 /* TipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E642B9E1B24691000903D95 /* TipViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +31,13 @@
 		5E60F15D1B1F22BA0078704A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E60F15F1B1F22BA0078704A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E60F1601B1F22BA0078704A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5E60F1621B1F22BA0078704A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5E60F1631B1F22BA0078704A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5E60F1661B1F22BA0078704A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E60F1681B1F22BA0078704A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5E60F16B1B1F22BA0078704A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5E60F1711B1F22BA0078704A /* TipdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E60F1761B1F22BA0078704A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E60F1771B1F22BA0078704A /* TipdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipdTests.m; sourceTree = "<group>"; };
+		5E642B9C1B24691000903D95 /* TipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		5E642B9D1B24691000903D95 /* TipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
+		5E642B9E1B24691000903D95 /* TipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +81,11 @@
 			children = (
 				5E60F15F1B1F22BA0078704A /* AppDelegate.h */,
 				5E60F1601B1F22BA0078704A /* AppDelegate.m */,
-				5E60F1621B1F22BA0078704A /* ViewController.h */,
-				5E60F1631B1F22BA0078704A /* ViewController.m */,
-				5E60F1651B1F22BA0078704A /* Main.storyboard */,
 				5E60F1681B1F22BA0078704A /* Images.xcassets */,
-				5E60F16A1B1F22BA0078704A /* LaunchScreen.xib */,
 				5E60F15B1B1F22BA0078704A /* Supporting Files */,
+				5E642B9C1B24691000903D95 /* TipViewController.h */,
+				5E642B9D1B24691000903D95 /* TipViewController.m */,
+				5E642B9E1B24691000903D95 /* TipViewController.xib */,
 			);
 			path = Tipd;
 			sourceTree = "<group>";
@@ -199,8 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E60F1671B1F22BA0078704A /* Main.storyboard in Resources */,
-				5E60F16C1B1F22BA0078704A /* LaunchScreen.xib in Resources */,
+				5E642BA01B24691000903D95 /* TipViewController.xib in Resources */,
 				5E60F1691B1F22BA0078704A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E60F1641B1F22BA0078704A /* ViewController.m in Sources */,
 				5E60F1611B1F22BA0078704A /* AppDelegate.m in Sources */,
+				5E642B9F1B24691000903D95 /* TipViewController.m in Sources */,
 				5E60F15E1B1F22BA0078704A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +238,6 @@
 			targetProxy = 5E60F1721B1F22BA0078704A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5E60F1651B1F22BA0078704A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E60F1661B1F22BA0078704A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5E60F16A1B1F22BA0078704A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E60F16B1B1F22BA0078704A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5E60F1791B1F22BA0078704A /* Debug */ = {
@@ -418,6 +395,7 @@
 				5E60F17D1B1F22BA0078704A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E60F17E1B1F22BA0078704A /* Build configuration list for PBXNativeTarget "TipdTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +404,7 @@
 				5E60F1801B1F22BA0078704A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
